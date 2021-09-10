@@ -51,7 +51,7 @@ public class Task1
     //Годы 2100, 2200 и 2300 - не високосные.
     //за правильный ответ - 0.5 балла
     public static boolean isLeapYear(int year) {
-        if ((year%4==0) && (year%400==0)){
+        if ((year%4==0) || (year%400==0)){
             return true;
         }
         else {return false;}
@@ -99,11 +99,12 @@ public class Task1
     //правильное решение - 0.5 балла
     public static void printArray(int[][] array){
         for (int i = 0; i < array.length; i++) {
-            System.out.println();
+            System.out.print("[");
             for (int j = 0; j < array[i].length; j++) {
                 System.out.print(array[i][j]+" ");
             }
-            System.out.println();
+            System.out.println("]");
+
         }
 
     }
